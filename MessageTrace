@@ -1,0 +1,10 @@
+Tracking sender.
+
+Get-MessageTrace -Sender usuario@dominio.com -StartDate 25/07/2017 -EndDate 25/07/2017 -PageSize 5000| Export-Csv c:\usuario.csv
+
+Tracking con asunto. 
+
+
+Get-MessageTrace -StartDate 01/07/2020 -EndDate 01/09/2020 -PageSize 5000| Where {$_.Subject -like "*Se ha unido al grupo*"} | Export-Csv c:\reporte.csv
+Get-MessageTrace -StartDate 05/20/2020 -EndDate 05/21/2020 -PageSize 5000| Where {$_.Subject -like "*PROBLEM*"} | Export-Csv c:\reporte.csv
+
